@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>7</title>
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        align-items: start;
+      }
+      .box {
+        border: 1px solid #ccc;
+        padding: 12px;
+        border-radius: 8px;
+      }
+      pre {
+        margin: 0;
+        white-space: pre; /* keep spaces + line breaks */
+        overflow: auto; /* scroll if long */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Two Columns: HTML Code vs Rendered Result</h1>
+
+    <div class="grid">
+      <!-- LEFT: show the HTML as text (escaped) -->
+      <div class="box">
+        <h2>Original HTML (displayed)</h2>
+        <pre><code>
+&lt;!-- This is an HTML comment --&gt;
+&lt;p&gt;Hello&lt;/p&gt;
+&lt;br /&gt;
+&lt;hr /&gt;
+&lt;br /&gt;
+
+&lt;!--
+    This is a multi-line HTML comment.
+    It can be used to explain sections of markup.
+
+    Notice how it spans many lines in the editor (Lines 13-16 to be precise).
+--&gt;
+&lt;div&gt;Content&lt;/div&gt;
+
+        </code></pre>
+      </div>
+
+      <!-- RIGHT: actual HTML that gets parsed -->
+      <div class="box">
+        <h2>Rendered Output</h2>
+        <!-- This is an HTML comment -->
+        <p>Hello</p>
+        <br />
+        <hr />
+        <br />
+
+        <!--
+        This is a multi-line HTML comment.
+        It can be used to explain sections of markup.
+
+        Notice how it spans many lines in the editor (Lines 13-16 to be precise).
+    -->
+        <div>Content</div>
+      </div>
+    </div>
+  </body>
+</html>
