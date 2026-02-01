@@ -1,0 +1,31 @@
+name: Deploy branch site to GitHub Pages (subfolders)
+
+on:
+  push:
+    branches:
+      - "**"          # run on every branch
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Deploy the branch contents into a folder named after the branch
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: .
+          destination_dir: ${{ github.ref_name }}
+          keep_files: true
