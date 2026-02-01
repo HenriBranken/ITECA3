@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>13</title>
+    <style>
+      /* bgcolor replacement */
+      body {
+        background-color: #fbcbcb;
+        color: #222222;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 24px;
+        line-height: 1.5;
+      }
+
+      /* unvisited */
+      a:link {
+        color: #0066cc;
+      }
+
+      /* visited link */
+      a:visited {
+        color: #359933;
+      }
+
+      /* while clicking */
+      a:active {
+        color: #ff3300;
+      }
+
+      /* optional: hover state */
+      a:hover {
+        background-color: pink;
+      }
+
+      .card {
+        background: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 16px 18px;
+        max-width: 720px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+    <h1>HTML5 + CSS Link/Body Color Demo</h1>
+    <p>
+      This page shows the modern HTML5 way to set the same colors that older
+      <code>&lt;body&gt;</code> attributes used to control (bgcolor, text, link, vlink, alink),
+      by using CSS instead.
+    </p>
+
+    <p>
+      Test links:
+      <a href="#section1">Jump to Section 1</a> |
+      <a href="#section2">Jump to Section 2</a> |
+      <a href="https://example.com" target="_blank" rel="noopener">Open Example.com</a>
+    </p>
+
+    <hr />
+
+    <h2 id="section1">Section 1</h2>
+    <p>
+      Click and hold a link to see the <strong>active</strong> color. After you click a link,
+      it may show as <strong>visited</strong> depending on your browser settings.
+    </p>
+
+    <h2 id="section2">Section 2</h2>
+    <p>
+      The page <strong>background</strong> and <strong>text</strong> colors are set on the
+      <code>body</code> selector in CSS.
+    </p>
+  </main>
+      </div>
+    </div>
+  </body>
+</html>

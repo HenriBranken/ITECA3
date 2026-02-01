@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>8</title>
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        align-items: start;
+      }
+      .box {
+        border: 1px solid #ccc;
+        padding: 12px;
+        border-radius: 8px;
+      }
+      pre {
+        margin: 0;
+        white-space: pre; /* keep spaces + line breaks */
+        overflow: auto; /* scroll if long */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Two Columns: HTML Code vs Rendered Result</h1>
+
+    <div class="grid">
+      <!-- LEFT: show the HTML as text (escaped) -->
+      <div class="box">
+        <h2>Original HTML (displayed)</h2>
+        <pre><code>
+&lt;h2&gt;&amp;lt;q&amp;gt; (short quote with quotation marks)&lt;/h2&gt;
+&lt;p&gt;
+  Nelson Mandela once said:
+  &lt;q&gt;It always seems impossible until it’s done.&lt;/q&gt;
+&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;&amp;lt;blockquote&amp;gt; (long quote, indented)&lt;/h2&gt;
+&lt;blockquote&gt;
+  Education is the most powerful weapon which you can use to change the
+  world.
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;&amp;lt;abbr&amp;gt; (acronym with meaning on hover)&lt;/h2&gt;
+&lt;p&gt;
+  I’m learning &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; and
+  &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;. (Hover over the
+  abbreviations.)
+&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;&amp;lt;address&amp;gt; (contact information)&lt;/h2&gt;
+&lt;address&gt;
+  Written by: Alex Student&lt;br /&gt;
+  Email: alex@example.com&lt;br /&gt;
+  Johannesburg, South Africa
+&lt;/address&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;&amp;lt;cite&amp;gt; (title of a work)&lt;/h2&gt;
+&lt;p&gt;My favourite book is &lt;cite&gt;Crime and Punishment&lt;/cite&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2&gt;&amp;lt;bdo&amp;gt; (Bi-Directional Override)&lt;/h2&gt;
+&lt;p&gt;Normal direction: Hello world&lt;/p&gt;
+&lt;p&gt;Right-to-left using &lt;code&gt;&amp;lt;bdo dir=&quot;rtl&quot;&amp;gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;bdo dir=&quot;rtl&quot;&gt;Hello world&lt;/bdo&gt;&lt;/p&gt;
+
+        </code></pre>
+      </div>
+
+      <!-- RIGHT: actual HTML that gets parsed -->
+      <div class="box">
+        <h2>Rendered Output</h2>
+        <h2>&lt;q&gt; (short quote with quotation marks)</h2>
+        <p>
+          Nelson Mandela once said:
+          <q>It always seems impossible until it’s done.</q>
+        </p>
+
+        <hr />
+
+        <h2>&lt;blockquote&gt; (long quote, indented)</h2>
+        <blockquote>
+          Education is the most powerful weapon which you can use to change the
+          world.
+        </blockquote>
+
+        <hr />
+
+        <h2>&lt;abbr&gt; (acronym with meaning on hover)</h2>
+        <p>
+          I’m learning <abbr title="HyperText Markup Language">HTML</abbr> and
+          <abbr title="Cascading Style Sheets">CSS</abbr>. (Hover over the
+          abbreviations.)
+        </p>
+
+        <hr />
+
+        <h2>&lt;address&gt; (contact information)</h2>
+        <address>
+          Written by: Alex Student<br />
+          Email: alex@example.com<br />
+          Johannesburg, South Africa
+        </address>
+
+        <hr />
+
+        <h2>&lt;cite&gt; (title of a work)</h2>
+        <p>My favourite book is <cite>Crime and Punishment</cite>.</p>
+
+        <hr />
+
+        <h2>&lt;bdo&gt; (Bi-Directional Override)</h2>
+        <p>Normal direction: Hello world</p>
+        <p>Right-to-left using <code>&lt;bdo dir="rtl"&gt;</code>:</p>
+        <p><bdo dir="rtl">Hello world</bdo></p>
+      </div>
+    </div>
+  </body>
+</html>

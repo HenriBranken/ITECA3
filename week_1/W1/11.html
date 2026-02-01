@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>11</title>
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 16px;
+        align-items: start;
+      }
+      .box {
+        border: 1px solid #ccc;
+        padding: 12px;
+        border-radius: 8px;
+      }
+      pre {
+        margin: 0;
+        white-space: pre; /* keep spaces + line breaks */
+        overflow: auto; /* scroll if long */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Two Columns: HTML Code vs Rendered Result</h1>
+
+    <div class="grid">
+      <!-- LEFT: show the HTML as text (escaped) -->
+      <div class="box">
+        <h2>Original HTML (displayed)</h2>
+        <pre><code>
+&lt;!-- Unordered List (bulleted list) --&gt;
+&lt;section&gt;
+    &lt;h2&gt;Unordered List Example&lt;/h2&gt;
+
+    &lt;ul&gt;
+        &lt;li&gt;HTML — Structure&lt;/li&gt;
+        &lt;li&gt;CSS — Styling&lt;/li&gt;
+        &lt;li&gt;JavaScript — Interactivity&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/section&gt;
+
+
+&lt;!-- Ordered List (numbered list) --&gt;
+&lt;section&gt;
+    &lt;h2&gt;Ordered List Example&lt;/h2&gt;
+
+    &lt;ol&gt;
+        &lt;li&gt;Plan the layout&lt;/li&gt;
+        &lt;li&gt;Write the HTML&lt;/li&gt;
+        &lt;li&gt;Add CSS styling&lt;/li&gt;
+        &lt;li&gt;Test and publish&lt;/li&gt;
+    &lt;/ol&gt;
+&lt;/section&gt;
+
+
+&lt;!-- Definition List (terms + descriptions) --&gt;
+&lt;section&gt;
+    &lt;h2&gt;Definition List Example&lt;/h2&gt;
+
+    &lt;dl&gt;
+        &lt;dt&gt;HTML&lt;/dt&gt;
+        &lt;dd&gt;A markup language used to structure web pages.&lt;/dd&gt;
+
+        &lt;dt&gt;CSS&lt;/dt&gt;
+        &lt;dd&gt;A styling language used to design and format web pages.&lt;/dd&gt;
+
+        &lt;dt&gt;JavaScript&lt;/dt&gt;
+        &lt;dd&gt;A programming language used to add interactivity to web pages.&lt;/dd&gt;
+    &lt;/dl&gt;
+&lt;/section&gt;
+        </code></pre>
+      </div>
+
+      <!-- RIGHT: actual HTML that gets parsed -->
+      <div class="box">
+        <h2>Rendered Output</h2>
+        <!-- Unordered List (bulleted list) -->
+        <section>
+          <h2>Unordered List Example</h2>
+
+          <ul>
+            <li>HTML — Structure</li>
+            <li>CSS — Styling</li>
+            <li>JavaScript — Interactivity</li>
+          </ul>
+        </section>
+
+        <!-- Ordered List (numbered list) -->
+        <section>
+          <h2>Ordered List Example</h2>
+
+          <ol>
+            <li>Plan the layout</li>
+            <li>Write the HTML</li>
+            <li>Add CSS styling</li>
+            <li>Test and publish</li>
+          </ol>
+        </section>
+
+        <!-- Definition List (terms + descriptions) -->
+        <section>
+          <h2>Definition List Example</h2>
+
+          <dl>
+            <dt>HTML</dt>
+            <dd>A markup language used to structure web pages.</dd>
+
+            <dt>CSS</dt>
+            <dd>A styling language used to design and format web pages.</dd>
+
+            <dt>JavaScript</dt>
+            <dd>
+              A programming language used to add interactivity to web pages.
+            </dd>
+          </dl>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
