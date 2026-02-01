@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>1</title>
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 16px;
+        align-items: start;
+      }
+      .box {
+        border: 1px solid #ccc;
+        padding: 12px;
+        border-radius: 8px;
+      }
+      pre {
+        margin: 0;
+        white-space: pre; /* keep spaces + line breaks */
+        overflow: auto; /* scroll if long */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Two Columns: HTML Code vs Rendered Result</h1>
+
+    <div class="grid">
+      <!-- LEFT: show the HTML as text (escaped) -->
+      <div class="box">
+        <h2>Original HTML (displayed)</h2>
+        <pre><code>
+&lt;h1&gt;This is the h1 heading&lt;/h1&gt;
+&lt;h2&gt;This is the h2 heading&lt;/h2&gt;
+&lt;h3&gt;This is the h3 heading&lt;/h3&gt;
+&lt;h4&gt;This is the h4 heading&lt;/h4&gt;
+&lt;h5&gt;This is the h5 heading&lt;/h5&gt;
+&lt;h6&gt;This is the h6 heading&lt;/h6&gt;
+
+        </code></pre>
+      </div>
+
+      <!-- RIGHT: actual HTML that gets parsed -->
+      <div class="box">
+        <h2>Rendered Output</h2>
+        <h1>This is the h1 heading</h1>
+        <h2>This is the h2 heading</h2>
+        <h3>This is the h3 heading</h3>
+        <h4>This is the h4 heading</h4>
+        <h5>This is the h5 heading</h5>
+        <h6>This is the h6 heading</h6>
+      </div>
+    </div>
+  </body>
+</html>

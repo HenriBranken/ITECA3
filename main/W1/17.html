@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>17</title>
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        align-items: start;
+      }
+      .box {
+        border: 1px solid #ccc;
+        padding: 12px;
+        border-radius: 8px;
+      }
+      pre {
+        margin: 0;
+        white-space: pre; /* keep spaces + line breaks */
+        overflow: auto; /* scroll if long */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Two Columns: HTML Code vs Rendered Result</h1>
+
+    <div class="grid">
+      <!-- LEFT: show the HTML as text (escaped) -->
+      <div class="box">
+        <h2>Original HTML (displayed)</h2>
+        <pre><code>
+&lt;table border=&quot;1&quot;&gt;
+  &lt;caption&gt;Term 1 Results&lt;/caption&gt;
+
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope=&quot;col&quot;&gt;Student&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Subject&lt;/th&gt;
+      &lt;th scope=&quot;col&quot;&gt;Mark&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Neo&lt;/td&gt;
+      &lt;td&gt;History&lt;/td&gt;
+      &lt;td&gt;74%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Imran&lt;/td&gt;
+      &lt;td&gt;Geography&lt;/td&gt;
+      &lt;td&gt;81%&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Siphiwe&lt;/td&gt;
+      &lt;td&gt;Life Sciences&lt;/td&gt;
+      &lt;td&gt;88%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td colspan=&quot;2&quot;&gt;Class Average&lt;/td&gt;
+      &lt;td&gt;81%&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+
+        </code></pre>
+      </div>
+
+      <!-- RIGHT: actual HTML that gets parsed -->
+      <div class="box">
+        <h2>Rendered Output</h2>
+        <table border="1">
+          <caption>
+            Term 1 Results
+          </caption>
+
+          <thead>
+            <tr>
+              <th scope="col">Student</th>
+              <th scope="col">Subject</th>
+              <th scope="col">Mark</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Neo</td>
+              <td>History</td>
+              <td>74%</td>
+            </tr>
+            <tr>
+              <td>Imran</td>
+              <td>Geography</td>
+              <td>81%</td>
+            </tr>
+            <tr>
+              <td>Siphiwe</td>
+              <td>Life Sciences</td>
+              <td>88%</td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <td colspan="2">Class Average</td>
+              <td>81%</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
