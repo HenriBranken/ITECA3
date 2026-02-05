@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Form Demos</title>
+    <style>
+      .spacer {
+        margin: 1rem 0 30rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Basic Form -->
+    <h1>Basic Form</h1>
+    <form action="" method="get">
+      <fieldset>
+        <label for="username">Username:</label>
+        <input id="username" name="username" type="text" required />
+        <br /><br />
+        <label for="password">Password:</label>
+        <input id="password" name="password" type="password" required />
+        <br /><br />
+        <button type="button" onclick="alert('Hello World!')">Submit</button>
+      </fieldset>
+    </form>
+    <hr class="spacer" />
+
+    <!-- Checkboxes -->
+    <h1>Checkboxes</h1>
+    <form action="/submit" method="post">
+      <fieldset>
+        <legend>Select your hobbies</legend>
+        <label>
+          <input type="checkbox" name="hobbies[]" value="sports" />
+          Sports
+        </label>
+        <label>
+          <input type="checkbox" name="hobbies[]" value="music" />
+          Music
+        </label>
+        <label>
+          <input type="checkbox" name="hobbies[]" value="gaming" />
+          Gaming
+        </label>
+        <label>
+          <input type="checkbox" name="hobbies[]" value="gymming" />
+          Gymming
+        </label>
+        <br />
+        <button type="button" onclick="alert('Hello World!')">Submit</button>
+      </fieldset>
+    </form>
+    <hr class="spacer" />
+
+    <!-- Radio Buttons -->
+    <h1>Radio Buttons</h1>
+    <form action="/submit" method="post">
+      <fieldset>
+        <legend>Choose a delivery option</legend>
+        <label>
+          <input type="radio" name="delivery" value="standard" />
+          Standard Shipping
+        </label>
+        <label>
+          <input type="radio" name="delivery" value="express" />
+          Express Delivery
+        </label>
+        <label>
+          <input type="radio" name="delivery" value="overnight" />
+          Overnight
+        </label>
+        <button type="button" onclick="alert('Hello World!')">Submit</button>
+      </fieldset>
+    </form>
+    <hr class="spacer" />
+
+    <!-- Single Selection -->
+    <h1>Select</h1>
+    <form action="/submit" method="post">
+      <fieldset>
+        <label for="grade">Choose your grade:</label>
+        <select id="grade" name="grade">
+          <option value="">-- Select one --</option>
+          <option value="8">Grade 8</option>
+          <option value="9">Grade 9</option>
+          <option value="10">Grade 10</option>
+          <option value="11">Grade 11</option>
+          <option value="12">Grade 12</option>
+        </select>
+        <button type="button" onclick="alert('Hello World!')">Submit</button>
+      </fieldset>
+    </form>
+    <hr class="spacer" />
+
+    <!-- Multiple Selection -->
+    <h1>Multiple Select</h1>
+    <form action="/submit" method="post">
+      <fieldset>
+        <legend>Choose your subjects</legend>
+
+        <label for="subjects">Select one or more:</label><br />
+        <select id="subjects" name="subjects[]" multiple="multiple" size="5">
+          <option value="maths">Maths</option>
+          <option value="english">English</option>
+          <option value="history">History</option>
+          <option value="geography">Geography</option>
+          <option value="lifesciences">Life Sciences</option>
+        </select>
+
+        <br /><br />
+        <button type="button" onclick="alert('Hello World!')">Submit</button>
+      </fieldset>
+    </form>
+    <hr class="spacer" />
+
+    <!-- Text Placeholder(s) -->
+    <h1>Placeholder Attribute</h1>
+    <form action="/submit" method="post">
+      <fieldset>
+        <legend>Sign up</legend>
+
+        <p>
+          <label for="fullname">Full name:</label><br />
+          <input
+            type="text"
+            id="fullname"
+            name="fullname"
+            placeholder="e.g. Henri Branken"
+          />
+        </p>
+
+        <p>
+          <label for="email">Email:</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="e.g. henri@example.com"
+          />
+        </p>
+
+        <p>
+          <label for="phone">Phone number:</label><br />
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="e.g. 082 123 4567"
+          />
+        </p>
+
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+
+    <hr class="spacer" />
+
+    <!-- Min, Max and Step -->
+    <h1>Min, Max and Step</h1>
+    <form action="/submit" method="post">
+      <fieldset>
+        <legend>Number input with Min, Max, Step</legend>
+
+        <label for="age">Age (13–19):</label>
+        <input
+          id="age"
+          name="age"
+          type="number"
+          min="13"
+          max="19"
+          step="1"
+          placeholder="15"
+          value="15"
+        />
+
+        <button type="button" onclick="alert('Hello World!')">Submit</button>
+      </fieldset>
+    </form>
+    <hr class="spacer" />
+
+    <!-- Textarea tag -->
+    <h1>Textarea tag</h1>
+    <form action="/submit" method="post">
+      <fieldset>
+        <legend>Feedback form</legend>
+
+        <p>
+          <label for="topic">Topic:</label><br />
+          <input
+            id="topic"
+            name="topic"
+            type="text"
+            placeholder="e.g. Website feedback"
+          />
+        </p>
+
+        <p>
+          <label for="feedback">Your feedback:</label><br />
+          <textarea
+            id="feedback"
+            name="feedback"
+            rows="10"
+            cols="90"
+            placeholder="Type your message here..."
+            style="resize: none"
+          ></textarea>
+        </p>
+
+        <button type="button" onclick="alert('Hello World!')">Submit</button>
+      </fieldset>
+    </form>
+
+    <hr class="spacer" />
+
+    <!-- Hidden Data -->
+    <h1>Hidden Data</h1>
+    <form action="/submit" method="post">
+      <!-- Hidden data that gets submitted, but the user won’t see it -->
+      <input type="hidden" name="form_id" value="contact_form_01" />
+
+      <p>
+        <label for="name">Name:</label>
+        <input id="name" name="name" type="text" />
+      </p>
+
+      <button type="button" onclick="alert('Hello World!')">Submit</button>
+    </form>
+
+    <hr class="spacer" />
+
+    <!-- Range Slider -->
+    <h1>Slider</h1>
+    <form action="/submit" method="post">
+      <fieldset>
+        <legend>Volume setting</legend>
+
+        <label for="volume">Volume (0 to 100):</label><br />
+        <input
+          type="range"
+          id="volume"
+          name="volume"
+          min="0"
+          max="100"
+          step="10"
+          value="50"
+        />
+
+        <br /><br />
+        <button type="submit">Submit</button>
+      </fieldset>
+
+      <hr class="spacer" />
+    </form>
+  </body>
+</html>
