@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4.7 Activity: A Simple Form</title>
+  </head>
+  <body>
+    <h1>A Simple Form</h1>
+    <h2><i>Form Fundamentals</i></h2>
+
+    <form action="thankyou.html">
+      <fieldset>
+        <legend><h2>Customer Info</h2></legend>
+
+        <div class="row">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="row">
+          <label for="cellphone">Telephone:</label>
+          <input
+            type="text"
+            id="cellphone"
+            name="cellphone"
+            placeholder="Pattern: 082 123 4567"
+            required
+          />
+        </div>
+
+        <div class="row">
+          <label for="email">Email Address:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@domain.com"
+            required
+          />
+        </div>
+
+        <div class="btn">
+          <button type="submit">Submit</button>
+        </div>
+      </fieldset>
+    </form>
+
+    <style>
+      * {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        box-sizing: border-box;
+      }
+
+      fieldset {
+        max-width: 460px;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: 140px 1fr; /* label column + input column */
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+
+      .row input {
+        width: 100%; /* fills the input column */
+        box-sizing: border-box; /* keeps widths consistent */
+      }
+
+      div.btn {
+        display: flex;
+        justify-content: right;
+        margin-top: 2em;
+      }
+    </style>
+  </body>
+</html>
