@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+    <link rel="stylesheet" href="./css/prism.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <script src="https://kit.fontawesome.com/3b389031fb.js" crossorigin="anonymous"></script>
+    <div class="header" id="page-top">
+        <ul class="nav">
+            <li><a href="./index.html">Basic JavaScript</a></li>
+            <li><a href="./javascript_functions.html">JavaScript Functions</a></li>
+            <li><a href="./js_events.html" class="selected">JavaScript Events</a></li>
+            <li><a href="./jquery.html">jQuery</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1><span class="code">onload</span></h1>
+        <p>Example of a <span class="code">load</span> event:</p>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                // Extract the &lt;img&gt; element.
+                let &dollar;imgGenya = document.getElementById('genya-img');
+                // Extract the &lt;figcaption&gt; element.
+                let &dollar;capGenya = document.getElementById('genya-cap');
+
+                // When the entire page has loaded, execute the `populateGenya()` function.
+                window.onload = populateGenya;
+
+                // The handler function.
+                function populateGenya() {
+                    // Hook up the `src` attribute with the correct filepath.
+                    &dollar;imgGenya.setAttribute('src', PATH_IMAGES + 'genya.png');
+                    // Generate the appropriate caption beneath the figure.
+                    &dollar;capGenya.innerHTML = 'A demonized Genya';
+                }
+            </code>
+        </pre>
+
+        <figure id="genya-fig">
+            <img id="genya-img">
+            <figcaption id="genya-cap"></figcaption>
+        </figure>
+
+        <h1><span class="code">onclick</span></h1>
+        <p>Click on the image below to reveal the unblurred image.</p>
+
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                // Navitgate to the correct folder.
+                let path_images = '../images/';
+
+                // Extract the image node we are interested in.
+                let &dollar;yoriichi = document.getElementById('yoriichitsugikuni');
+
+                // Assign the `showTrueImage` function to the `onclick` property.
+                &dollar;yoriichi.onclick = showTrueImage;
+
+                function showTrueImage(e) {
+                    // Specify the image we are interested in.
+                    let imgElement = e.target;
+                    // Get the name of the non-blurred image.
+                    let name = path_images + imgElement.id + '.jpg';
+                    // Change the `src` attribute to the non-blurred image filepath.
+                    imgElement.src = name;
+
+                    // Set up an timer event that will fire in 2.5 seconds.
+                    setTimeout(reblur, 2500, imgElement);
+                }
+
+                // When this handler is called, it will be passed `imgElement`
+                function reblur(imgElement) {
+                    // Get the name of the blurred image.
+                    let name_blur = path_images + imgElement.id + '_blur.jpg';
+                    // Change the `src` attribute back to the name of the blurred image filepath.
+                    imgElement.src = name_blur;
+                }
+            </code>
+        </pre>
+        <figure class="img-container">
+            <img id="yoriichitsugikuni" src="./images/yoriichitsugikuni_blur.jpg">
+            <figcaption>Click Me &#x2191;</figcaption>
+        </figure>
+
+        <h1><span class="code">onkeydown</span></h1>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                // Create an &lt;img&gt; element.
+                let &dollar;elem = document.createElement('img');
+                // Specify the path of the image.
+                &dollar;elem.setAttribute('src', PATH_IMAGES + 'rengoku.jpg');
+                // Assign id attribute to &lt;img&gt; element.
+                &dollar;elem.setAttribute('id', 'rengoku');
+
+                // Extract Input Node.
+                let &dollar;keydownInput = document.getElementById('keydownInput');
+
+                // Hook up the handler with the keydown event.
+                &dollar;keydownInput.onkeydown = populateImage;
+
+
+                function populateImage(e) {
+                    // Determine whether the character 'j' was pressed.  'j' has a code of 74.
+                    let keyCode = e.which;
+                    if (keyCode == 74) {
+                        // Append &lt;img&gt; element to the div#keydownDiv.
+                        document.getElementById('keydownDiv').appendChild(&dollar;elem);
+                        
+                        // Set a timer event that will fire in 5 seconds.
+                        setTimeout(destroy, 5000, elem)
+                    }
+                }
+
+                function destroy(elem) {
+                    // Identify the &lt;div&gt; element.
+                    let &dollar;div = document.getElementById('keydownDiv');
+                    // Remove the &lt;img&gt; element from div#keydownDiv.
+                    &dollar;div.removeChild(elem);
+                }
+            </code>
+        </pre>
+        <p>Please press the letter <span class="code">j</span> on your keyboard, and then scroll down the page.</p>
+        <div id="keydownDiv">
+            <input type="text" id="keydownInput">
+        </div>
+
+        <h1><span class="code">onmouseover</span> &amp; <span class="code">onmouseout</span></h1>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                // Extract the appropriate &lt;img&gt; node element.
+                let &dollar;imgDaki = document.getElementById('daki');
+
+                // Hook up event handlers with the `mouseover` & `mouseout` events.
+                &dollar;imgDaki.onmouseover = invertImg;
+                &dollar;imgDaki.onmouseout = revertImg;
+
+                // Invert the image completely.
+                function invertImg() {
+                    &dollar;imgDaki.style.filter = 'sepia(100%)';
+                }
+
+                // Revert the image back to its initial colours.
+                function revertImg() {
+                    &dollar;imgDaki.style.filter = 'sepia(0%)';
+                }
+            </code>
+        </pre>
+        <p>Place your mouse cursor <em>over</em> the image, and then again <em>out</em> of the image.</p>
+        <figure>
+            <img id="daki" src="./images/daki.png">
+        </figure>
+
+        <h1><span class="code">onchange</span></h1>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                // Extract the &lt;select&gt; node.
+                let &dollar;selection = document.getElementById('mySelect');
+                // Extract the &lt;img&gt; node.
+                let &dollar;upper_moon = document.getElementById('upper_moon');
+                // Extract the &lt;figcaption&gt; mode.
+                let &dollar;caption = document.getElementById('upper_moon_cap');
+                
+                // Hook up handler `changeImage` with the `onchange` event.
+                &dollar;selection.onchange = changeImage;
+                
+                function changeImage() {
+                    // Get the filename of the image we need.
+                    let filename = selection.value;
+                    // Extract the number at the 5th-last position.
+                    let number = filename.charAt(filename.length - 5);
+                    // Insert the filepath value into the 'src' attribute.
+                    &dollar;upper_moon.setAttribute('src', '../images/' + filename);
+                    // Generate the correction caption for the corresponding image.
+                    &dollar;caption.innerHTML = 'Upper Moon ' + number;
+                }
+            </code>
+        </pre>
+        <p>Select a number from the list below:</p>
+
+        <select id="mySelect">
+            <option value="upper_moon_1.png">1</option>
+            <option value="upper_moon_2.png">2</option>
+            <option value="upper_moon_3.png">3</option>
+            <option value="upper_moon_4.png">4</option>
+            <option value="upper_moon_5.png">5</option>
+            <option value="upper_moon_6.png">6</option>
+        </select>
+
+        <figure>
+            <img id="upper_moon" src="./images/muzan.png" width="600px">
+            <figcaption id="upper_moon_cap"></figcaption>
+        </figure>
+    </div>
+
+    <!-- Button to go back to the top of the page -->
+    <div id="back-to-top">
+        <a href="#page-top" class="fa-sharp fa-solid fa-circle-up"></a>
+    </div>
+
+    </div>
+    <div class="footer">
+        <hr>
+        <p>Level 4, Task 15.</p>
+    </div>
+
+    <script src="./javaScript/jquery-3.7.0.min.js"></script>
+    <script src="./javaScript/events.js"></script>
+    <script src="./javaScript/prism.js"></script>
+</body>
+
+</html>
