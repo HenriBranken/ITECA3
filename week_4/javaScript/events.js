@@ -124,7 +124,7 @@ function changeImage() {
   // Extract the number at the 5th-last position.
   let number = filename.charAt(filename.length - 5);
   // Insert the filepath value into the 'src' attribute.
-  $upper_moon.setAttribute("src", "../images/" + filename);
+  $upper_moon.setAttribute("src", "./images/" + filename);
   // Generate the correction caption for the corresponding image.
   $caption.innerHTML = "Upper Moon " + number;
 }
