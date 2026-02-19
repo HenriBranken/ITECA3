@@ -1,40 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basic JavaScript Syntax</title>
-    <link rel="stylesheet" href="./css/prism.css">
-    <link rel="stylesheet" href="./css/main.css">
-</head>
+    <link rel="stylesheet" href="./css/prism.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
 
-<body>
-    <script src="https://kit.fontawesome.com/3b389031fb.js" crossorigin="anonymous"></script>
+  <body>
+    <script
+      src="https://kit.fontawesome.com/3b389031fb.js"
+      crossorigin="anonymous"
+    ></script>
     <div class="header" id="page-top">
-        <ul class="nav">
-            <li><a href="./index.html">Basic JavaScript</a></li>
-            <li><a href="./javascript_functions.html">JavaScript Functions</a></li>
-            <li><a href="./js_events.html">JavaScript Events</a></li>
-            <li><a href="./jquery.html" class="selected">jQuery</a></li>
-        </ul>
+      <ul class="nav">
+        <li><a href="./index.html">Basic JavaScript</a></li>
+        <li><a href="./javascript_functions.html">JavaScript Functions</a></li>
+        <li><a href="./js_events.html">JavaScript Events</a></li>
+        <li><a href="./jquery.html" class="selected">jQuery</a></li>
+      </ul>
     </div>
 
     <div class="content">
-        <h1>Enabling <span class="code">jQuery</span></h1>
-        <p>You can download your <span class="code">jQuery</span> library from a site such as <a href="https://jquery.com/download/"><strong>this one</strong></a>.  For demonstration purposes, let us assume that our downloaded file is named <span class="code">jquery-3.7.0.min.js</span>, and that we placed it inside the folder <span class="code">./javaScript/</span> in our project.  Also assume that <span class="code">./javaScript/globaljavascript.js</span> is our own custom <span class="code">jQuery</span> code.</p>
-        <p>Before closing with your <span class="code">&lt;/body&gt;</span> tag, insert the last line in the code snippet below into your script.</p>
-        
-        <pre>
+      <h1>Enabling <span class="code">jQuery</span></h1>
+      <p>
+        You can download your <span class="code">jQuery</span> library from a
+        site such as
+        <a href="https://jquery.com/download/"><strong>this one</strong></a
+        >. For demonstration purposes, let us assume that our downloaded file is
+        named <span class="code">jquery-3.7.0.min.js</span>, and that we placed
+        it inside the folder <span class="code">./javaScript/</span> in our
+        project. Also assume that
+        <span class="code">./javaScript/globaljavascript.js</span> is our own
+        custom <span class="code">jQuery</span> code.
+      </p>
+      <p>
+        Before closing with your <span class="code">&lt;/body&gt;</span> tag,
+        insert the last line in the code snippet below into your script.
+      </p>
+
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 &lt;script src="./javaScript/globaljavascript.js"&gt;&lt;/script&gt;
                 &lt;script src="./javaScript/jquery-3.7.0.min.js"&gt;&lt;/script&gt;
             </code>
         </pre>
 
-        <h1><span class="code">$(this).remove()</span></h1>
-        <pre>
+      <h1><span class="code">$(this).remove()</span></h1>
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 // We identify all the &lt;li&gt; elements of interest with the 'ul#eg1&gt;li' selector.
                 // When a 'click' events fires on any of the &lt;li&gt; elements, remove the item from the parent &lt;ul&gt;.
@@ -44,17 +59,19 @@
             </code>
         </pre>
 
-        <p>Click on an item below to remove it from your <em>shopping list</em>.</p>
+      <p>
+        Click on an item below to remove it from your <em>shopping list</em>.
+      </p>
 
-        <ul id="eg1" class="eg">
-            <li class="hot eg">fresh figs</li>
-            <li class="hot eg">pine nuts</li>
-            <li class="hot eg">honey</li>
-            <li class="normal eg">balsamic vinegar</li>
-        </ul>
+      <ul id="eg1" class="eg">
+        <li class="hot eg">fresh figs</li>
+        <li class="hot eg">pine nuts</li>
+        <li class="hot eg">honey</li>
+        <li class="normal eg">balsamic vinegar</li>
+      </ul>
 
-        <h1>Looping</h1>
-        <pre>
+      <h1>Looping</h1>
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 // For every &lt;li&gt; element with a class of '.hot':
                     // Add another class, named 'special'.
@@ -64,19 +81,26 @@
             </code>
         </pre>
 
-        <p>Within <strong>jQuery</strong>, when a selector returns multiple elements, you can update all of them using a method.  There is no need to use a loop.</p>
-        <p>Notice how all elements below with the class <span class="code">'hot'</span> gets italicised.</p>
+      <p>
+        Within <strong>jQuery</strong>, when a selector returns multiple
+        elements, you can update all of them using a method. There is no need to
+        use a loop.
+      </p>
+      <p>
+        Notice how all elements below with the class
+        <span class="code">'hot'</span> gets italicised.
+      </p>
 
-        <ul id="eg2" class="eg">
-            <li class="hot eg">fresh figs</li>
-            <li class="hot eg">pine nuts</li>
-            <li class="hot eg">honey</li>
-            <li class="normal eg">balsamic vinegar</li>
-        </ul>
-        
-        <h1>Chaining</h1>
+      <ul id="eg2" class="eg">
+        <li class="hot eg">fresh figs</li>
+        <li class="hot eg">pine nuts</li>
+        <li class="hot eg">honey</li>
+        <li class="normal eg">balsamic vinegar</li>
+      </ul>
 
-        <pre>
+      <h1>Chaining</h1>
+
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 // For all the &lt;li&gt; children of the &lt;ul&gt; element, EXCEPT 'li#one':
                     // hide the &lt;li&gt; elements.
@@ -88,22 +112,39 @@
                     .fadeIn(1500);
             </code>
         </pre>
-        
-        <p>If you want to use more than one jQuery method on the same selection of elements, you can list several methods at a time using the dot notation to separate each one.  This results in code that is far more compact.</p>
 
-        <p>Below, three methods act on the same selection of elements: <span class="code">hide()</span> hides the elements, <span class="code">delay()</span> creates a pause, and <span class="code">fadeIn()</span> fades in the elements.  Refresh the page for the chained methods to occur again.</p>
+      <p>
+        If you want to use more than one jQuery method on the same selection of
+        elements, you can list several methods at a time using the dot notation
+        to separate each one. This results in code that is far more compact.
+      </p>
 
-        <ul id="eg3" class="eg">
-            <li id="one" class="hot eg">fresh figs</li>
-            <li id="two" class="hot eg">pine nuts</li>
-            <li id="three" class="hot eg">honey</li>
-            <li id="four" class="normal eg">balsamic vinegar</li>
-        </ul>
+      <p>
+        Below, three methods act on the same selection of elements:
+        <span class="code">hide()</span> hides the elements,
+        <span class="code">delay()</span> creates a pause, and
+        <span class="code">fadeIn()</span> fades in the elements. Refresh the
+        page for the chained methods to occur again.
+      </p>
 
-        <h1>Getting Content</h1>
-        <p>In the code below, the selector returns the <span class="code">&lt;ul&gt;</span> element.  The <span class="code">.text()</span> method gets the text from all of the <span class="code">&lt;ul&gt;</span> element's children.  This is then appended to the end of the selection, in this case, after the existing <span class="code">&lt;ul&gt;</span> element.</p>
+      <ul id="eg3" class="eg">
+        <li id="one" class="hot eg">fresh figs</li>
+        <li id="two" class="hot eg">pine nuts</li>
+        <li id="three" class="hot eg">honey</li>
+        <li id="four" class="normal eg">balsamic vinegar</li>
+      </ul>
 
-        <pre>
+      <h1>Getting Content</h1>
+      <p>
+        In the code below, the selector returns the
+        <span class="code">&lt;ul&gt;</span> element. The
+        <span class="code">.text()</span> method gets the text from all of the
+        <span class="code">&lt;ul&gt;</span> element's children. This is then
+        appended to the end of the selection, in this case, after the existing
+        <span class="code">&lt;ul&gt;</span> element.
+      </p>
+
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 // Extract all the text content from the &lt;ul&gt; element, and store it inside variable `listText`.
                 let listText = $('ul#eg4').text();
@@ -114,17 +155,22 @@
             </code>
         </pre>
 
-        <ul id="eg4" class="eg">
-            <li class="hot eg">fresh figs</li>
-            <li class="hot eg">pine nuts</li>
-            <li class="hot eg">honey</li>
-            <li class="normal eg">balsamic vinegar</li>
-        </ul>
+      <ul id="eg4" class="eg">
+        <li class="hot eg">fresh figs</li>
+        <li class="hot eg">pine nuts</li>
+        <li class="hot eg">honey</li>
+        <li class="normal eg">balsamic vinegar</li>
+      </ul>
 
-        <h1>Changing Content</h1>
-        <p>This example selects any list items that contain the word <span class="code">pine</span>.  It then changes the text of the matching element to <span class="code">almonds</span> using the <span class="code">.text()</span> method.</p>
+      <h1>Changing Content</h1>
+      <p>
+        This example selects any list items that contain the word
+        <span class="code">pine</span>. It then changes the text of the matching
+        element to <span class="code">almonds</span> using the
+        <span class="code">.text()</span> method.
+      </p>
 
-        <pre>
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 // &dollar;(function() ...) is a shortcut for the ready event method on the document object.
                 &dollar;(function() {
@@ -134,20 +180,30 @@
                 });
             </code>
         </pre>
-        
 
-        <ul id="eg5" class="eg">
-            <li class="hot eg">fresh figs</li>
-            <li class="cool eg">pine nuts</li>
-            <li class="hot eg">honey</li>
-            <li class="normal eg">balsamic vinegar</li>
-        </ul>
+      <ul id="eg5" class="eg">
+        <li class="hot eg">fresh figs</li>
+        <li class="cool eg">pine nuts</li>
+        <li class="hot eg">honey</li>
+        <li class="normal eg">balsamic vinegar</li>
+      </ul>
 
-        <h1>Adding New Content</h1>
-        <p>First we select all the <span class="code">&lt;li&gt;</span> whose <span class="code">class</span> attribute contains a value of <span class="code">hot</span>, and uses the <span class="code">.prepend()</span> method to add a plus symbol before the text.</p>
-        <p>Secondly, a new <span class="code">&lt;li&gt;</span> element is created and stored in a variable.  Then the last <span class="code">&lt;li&gt;</span> element is selected, and the new element is added using the <span class="code">.after()</span> method.</p>
-        
-        <pre>
+      <h1>Adding New Content</h1>
+      <p>
+        First we select all the <span class="code">&lt;li&gt;</span> whose
+        <span class="code">class</span> attribute contains a value of
+        <span class="code">hot</span>, and uses the
+        <span class="code">.prepend()</span> method to add a plus symbol before
+        the text.
+      </p>
+      <p>
+        Secondly, a new <span class="code">&lt;li&gt;</span> element is created
+        and stored in a variable. Then the last
+        <span class="code">&lt;li&gt;</span> element is selected, and the new
+        element is added using the <span class="code">.after()</span> method.
+      </p>
+
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 &dollar;(function() {
                     // Prepend a '+' symbol before each 'li.hot' element.
@@ -161,17 +217,21 @@
                 });
             </code>
         </pre>
-        <ul id="eg6" class="eg">
-            <li class="hot eg">fresh figs</li>
-            <li class="hot eg">pine nuts</li>
-            <li class="hot eg">honey</li>
-            <li class="normal eg">balsamic vinegar</li>
-        </ul>
+      <ul id="eg6" class="eg">
+        <li class="hot eg">fresh figs</li>
+        <li class="hot eg">pine nuts</li>
+        <li class="hot eg">honey</li>
+        <li class="normal eg">balsamic vinegar</li>
+      </ul>
 
-        <h1>Changing CSS Rules</h1>
-        <p>This example demonstrates how the <span class="code">.css()</span> method can be used to select and update the CSS properties of elements.</p>
+      <h1>Changing CSS Rules</h1>
+      <p>
+        This example demonstrates how the
+        <span class="code">.css()</span> method can be used to select and update
+        the CSS properties of elements.
+      </p>
 
-        <pre>
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 &dollar;(function() {
                     // Extract the initial background color from the &lt;li&gt; element (which is rgb(255, 167, 35)).
@@ -191,19 +251,30 @@
                 });
             </code>
         </pre>
-        <ul id="eg7" class="eg">
-            <li class="normal eg">fresh figs</li>
-            <li class="normal eg">pine nuts</li>
-            <li class="normal eg">honey</li>
-            <li class="normal eg">balsamic vinegar</li>
-        </ul>
+      <ul id="eg7" class="eg">
+        <li class="normal eg">fresh figs</li>
+        <li class="normal eg">pine nuts</li>
+        <li class="normal eg">honey</li>
+        <li class="normal eg">balsamic vinegar</li>
+      </ul>
 
-        <h1>Using <span class="code">.each()</span></h1>
-        <p>This example creates a jQuery object containing all of the list items from the page.</p>
-        <p>The <span class="code">.each()</span> method is then used to loop through the list items and run an anonymous function for each item.</p>
-        <p>The anonymous function takes the value from the <span class="code">id</span> attribute on the <span class="code">&lt;li&gt;</span> and adds it to the txt in the list item.</p>
+      <h1>Using <span class="code">.each()</span></h1>
+      <p>
+        This example creates a jQuery object containing all of the list items
+        from the page.
+      </p>
+      <p>
+        The <span class="code">.each()</span> method is then used to loop
+        through the list items and run an anonymous function for each item.
+      </p>
+      <p>
+        The anonymous function takes the value from the
+        <span class="code">id</span> attribute on the
+        <span class="code">&lt;li&gt;</span> and adds it to the txt in the list
+        item.
+      </p>
 
-        <pre>
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 &dollar;(function() {
                     // A jQuery object containing all the &lt;li&gt; elements of interest.
@@ -218,18 +289,25 @@
             </code>
         </pre>
 
-        <ul id="eg8" class="eg">
-            <li id="one" class="normal eg">fresh figs</li>
-            <li id="two" class="normal eg">pine nuts</li>
-            <li id="three" class="normal eg">honey</li>
-            <li id="four" class="cool eg">balsamic vinegar</li>
-        </ul>
-        
-        <h1>Events</h1>
-        <p>In this example, when the mouse moves over a list item, the content of its <span class="code">id</span> attribute is written into the list item.</p>
-        <p>The <span class="code">mouseout</span> event also removes this extra information from the page to prevent content building up.</p>
+      <ul id="eg8" class="eg">
+        <li id="one" class="normal eg">fresh figs</li>
+        <li id="two" class="normal eg">pine nuts</li>
+        <li id="three" class="normal eg">honey</li>
+        <li id="four" class="cool eg">balsamic vinegar</li>
+      </ul>
 
-        <pre>
+      <h1>Events</h1>
+      <p>
+        In this example, when the mouse moves over a list item, the content of
+        its <span class="code">id</span> attribute is written into the list
+        item.
+      </p>
+      <p>
+        The <span class="code">mouseout</span> event also removes this extra
+        information from the page to prevent content building up.
+      </p>
+
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 &dollar;(function() {
                     let ids = '';
@@ -253,19 +331,31 @@
             </code>
         </pre>
 
-        <ul id="eg9" class="eg">
-            <li id="one" class="hot eg">fresh figs</li>
-            <li id="two" class="hot eg">pine nuts</li>
-            <li id="three" class="normal eg">honey</li>
-            <li id="four" class="cool eg">balsamic vinegar</li>
-        </ul>
+      <ul id="eg9" class="eg">
+        <li id="one" class="hot eg">fresh figs</li>
+        <li id="two" class="hot eg">pine nuts</li>
+        <li id="three" class="normal eg">honey</li>
+        <li id="four" class="cool eg">balsamic vinegar</li>
+      </ul>
 
-        <h1>Event Object</h1>
-        <p>In this example, when users click on a list item, the type of event that occurred is written to that element.</p>
-        <p>The <span class="code">type</span> property of the <span class="code">event</span> object states the kind of event that triggered it.</p>
-        <p>To prevent the list from becoming cluttered with multiple entries, whenever a list item is clicked, any <span class="code">&lt;span&gt;</span> elements will be removed from the list.</p>
+      <h1>Event Object</h1>
+      <p>
+        In this example, when users click on a list item, the type of event that
+        occurred is written to that element.
+      </p>
+      <p>
+        The <span class="code">type</span> property of the
+        <span class="code">event</span> object states the kind of event that
+        triggered it.
+      </p>
+      <p>
+        To prevent the list from becoming cluttered with multiple entries,
+        whenever a list item is clicked, any
+        <span class="code">&lt;span&gt;</span> elements will be removed from the
+        list.
+      </p>
 
-        <pre>
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 &dollar;(function() {
                     // Identify the &lt;li&gt; elements that we are interested in.
@@ -283,18 +373,25 @@
             </code>
         </pre>
 
-        <ul id="eg10" class="eg">
-            <li class="hot eg">fresh figs</li>
-            <li class="hot eg">pine nuts</li>
-            <li class="normal eg">honey</li>
-            <li class="cool eg">balsamic vinegar</li>
-        </ul>
+      <ul id="eg10" class="eg">
+        <li class="hot eg">fresh figs</li>
+        <li class="hot eg">pine nuts</li>
+        <li class="normal eg">honey</li>
+        <li class="cool eg">balsamic vinegar</li>
+      </ul>
 
-        <h1>Delegating Events</h1>
-        <p>In this example, the event handler will run when the users mouseover or click on items in the list, except for the last list item (which has an <span class="code">id</span> of <span class="code">four</span>).</p>
-        <p>It writes out the content of the element the user interacted with, and the event type, to the paragraph at the bottom.</p>
+      <h1>Delegating Events</h1>
+      <p>
+        In this example, the event handler will run when the users mouseover or
+        click on items in the list, except for the last list item (which has an
+        <span class="code">id</span> of <span class="code">four</span>).
+      </p>
+      <p>
+        It writes out the content of the element the user interacted with, and
+        the event type, to the paragraph at the bottom.
+      </p>
 
-        <pre>
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 &dollar;(function() {
                     let listItem, eventType;
@@ -317,18 +414,22 @@
             </code>
         </pre>
 
-        <ul id="eg11" class="eg">
-            <li id="one" class="cool eg">fresh figs</li>
-            <li id="two" class="cool eg">pine nuts</li>
-            <li id="three" class="cool eg">honey</li>
-            <li id="four" class="hot eg">balsamic vinegar</li>
-            <p id="notes"></p>
-        </ul>
+      <ul id="eg11" class="eg">
+        <li id="one" class="cool eg">fresh figs</li>
+        <li id="two" class="cool eg">pine nuts</li>
+        <li id="three" class="cool eg">honey</li>
+        <li id="four" class="hot eg">balsamic vinegar</li>
+        <p id="notes"></p>
+      </ul>
 
-        <h1>Basic Effects</h1>
-        <p>In this example, it appears as if the list items are raded into view when the page loads.  Secondly, each item is faded out when it is clicked on.</p>
+      <h1>Basic Effects</h1>
+      <p>
+        In this example, it appears as if the list items are raded into view
+        when the page loads. Secondly, each item is faded out when it is clicked
+        on.
+      </p>
 
-        <pre>
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 &dollar;(function() {
                     // Identify the &lt;li&gt; elements we are interested in.
@@ -346,17 +447,26 @@
                 });
             </code>
         </pre>
-        <ul id="eg12" class="eg">
-            <li class="complete eg">fresh figs</li>
-            <li class="complete eg">pine nuts</li>
-            <li class="complete eg">honey</li>
-            <li class="complete eg">balsamic vinegar</li>
-        </ul>
+      <ul id="eg12" class="eg">
+        <li class="complete eg">fresh figs</li>
+        <li class="complete eg">pine nuts</li>
+        <li class="complete eg">honey</li>
+        <li class="complete eg">balsamic vinegar</li>
+      </ul>
 
-        <h1>Using Animation</h1>
-        <p>In this example, the <span class="code">.animate()</span> method is used to gradually change the values of two CSS properties. The <span class="code">animate</span> property makes it look like the text is sliding to the right as it fades out.</p>
-        <p>When the user clicks on a list item, it fades out, and the text content slides to the right (which takes 600ms).  Once that is complete, a callback function removes the element.</p>
-        <pre>
+      <h1>Using Animation</h1>
+      <p>
+        In this example, the <span class="code">.animate()</span> method is used
+        to gradually change the values of two CSS properties. The
+        <span class="code">animate</span> property makes it look like the text
+        is sliding to the right as it fades out.
+      </p>
+      <p>
+        When the user clicks on a list item, it fades out, and the text content
+        slides to the right (which takes 600ms). Once that is complete, a
+        callback function removes the element.
+      </p>
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 &dollar;(function() {
                     // Identify the &lt;li&gt; elements that we are interested in.
@@ -378,20 +488,30 @@
             </code>
         </pre>
 
-        <ul id="eg13" class="eg">
-            <li class="cool eg">fresh figs</li>
-            <li class="hot eg">pine nuts</li>
-            <li class="cool eg">honey</li>
-            <li class="hot eg">balsamic vinegar</li>
-        </ul>
+      <ul id="eg13" class="eg">
+        <li class="cool eg">fresh figs</li>
+        <li class="hot eg">pine nuts</li>
+        <li class="cool eg">honey</li>
+        <li class="hot eg">balsamic vinegar</li>
+      </ul>
 
-        <h1>Traversing DOM elements</h1>
+      <h1>Traversing DOM elements</h1>
 
-        <p>When the page loads, the list below is hidden, and a link is added to the heading that indicates the users can display the list if they wish.</p>
-        <p>The link is added inside the heading and, if the user click on the link, the <span class="code">&lt;ul&gt;</span> element is faded in.</p>
-        <p>Any child <span class="code">&lt;li&gt;</span> elements that have a class attribute whose value is <span class="code">hot</span> are also given an extra value of <span class="code">complete</span>.</p>
+      <p>
+        When the page loads, the list below is hidden, and a link is added to
+        the heading that indicates the users can display the list if they wish.
+      </p>
+      <p>
+        The link is added inside the heading and, if the user click on the link,
+        the <span class="code">&lt;ul&gt;</span> element is faded in.
+      </p>
+      <p>
+        Any child <span class="code">&lt;li&gt;</span> elements that have a
+        class attribute whose value is <span class="code">hot</span> are also
+        given an extra value of <span class="code">complete</span>.
+      </p>
 
-        <pre>
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 &dollar;(function() {
                     // Identify the &lt;h3&gt; element we are interested in.
@@ -418,19 +538,18 @@
             </code>
         </pre>
 
-        <h3>
-            Buy Groceries
-        </h3>
-        <ul id="eg14" class="eg">
-            <li class="cool eg">fresh figs</li>
-            <li class="hot eg">pine nuts</li>
-            <li class="cool eg">honey</li>
-            <li class="hot eg">balsamic vinegar</li>
-        </ul>
+      <h3>Buy Groceries</h3>
+      <ul id="eg14" class="eg">
+        <li class="cool eg">fresh figs</li>
+        <li class="hot eg">pine nuts</li>
+        <li class="cool eg">honey</li>
+        <li class="hot eg">balsamic vinegar</li>
+      </ul>
 
-        <h1>Show Effect</h1><br>
+      <h1>Show Effect</h1>
+      <br />
 
-        <pre>
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 &dollar;(function() {
                     // Identify the paragraph, and the two buttons: one for showing, and one for hiding.
@@ -453,12 +572,13 @@
             </code>
         </pre>
 
-        <p id="show">This is a paragraph that can be shown or hidden.</p>
-        <button id="btn1">Show</button>
-        <button id="btn2">Hide</button><br>
+      <p id="show">This is a paragraph that can be shown or hidden.</p>
+      <button id="btn1">Show</button>
+      <button id="btn2">Hide</button><br />
 
-        <h1>Slide Effect</h1><br>
-        <pre>
+      <h1>Slide Effect</h1>
+      <br />
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 &dollar;(function() {
                     // When #triggerSlide is clicked, 
@@ -470,14 +590,15 @@
             </code>
         </pre>
 
-        <div id="triggerSlide">Click this to slide the panel.</div>
-        <div id="slidePanel">
-            <img src="./images/hashiras.jpg">
-        </div>
+      <div id="triggerSlide">Click this to slide the panel.</div>
+      <div id="slidePanel">
+        <img src="./images/hashiras.jpg" />
+      </div>
 
-        <h1>Stop Effect</h1><br>
+      <h1>Stop Effect</h1>
+      <br />
 
-        <pre>
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 &dollar;(function() {
                     &dollar;('#triggerSlide-2').on('click', function() {
@@ -492,13 +613,17 @@
             </code>
         </pre>
 
-        <button id="stopSliding"><strong>Stop Sliding</strong></button><br>
-        <div id="triggerSlide-2"><strong>Click</strong> this to slide the panel, and then the <strong>stop button</strong> above to stop sliding.</div>
-        <div id="slidePanel-2"></div>
+      <button id="stopSliding"><strong>Stop Sliding</strong></button><br />
+      <div id="triggerSlide-2">
+        <strong>Click</strong> this to slide the panel, and then the
+        <strong>stop button</strong> above to stop sliding.
+      </div>
+      <div id="slidePanel-2"></div>
 
-        <h1>Double-Click Event</h1><br>
+      <h1>Double-Click Event</h1>
+      <br />
 
-        <pre>
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 &dollar;(function() {
                     // When double-clicking on the paragraph, Alert the user.
@@ -508,12 +633,13 @@
                 });
             </code>
         </pre>
-        
-        <p id="clickclick">Double-Click this Box.</p>
 
-        <h1>Keyboard Events</h1><br>
+      <p id="clickclick">Double-Click this Box.</p>
 
-        <pre>
+      <h1>Keyboard Events</h1>
+      <br />
+
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 &dollar;(function() {
                     // Listen for a keydown event.
@@ -544,13 +670,29 @@
             </code>
         </pre>
 
-        <input id="kbdown" type="text" placeholder="Press any key..." size="15"><br>
-        <input id="kbup" type="text" placeholder="Press any key..." size="15"><br>
-        <input id="kbpress" type="text" placeholder="Press any key..." size="15"><br>
+      <input
+        id="kbdown"
+        type="text"
+        placeholder="Press any key..."
+        size="15"
+      /><br />
+      <input
+        id="kbup"
+        type="text"
+        placeholder="Press any key..."
+        size="15"
+      /><br />
+      <input
+        id="kbpress"
+        type="text"
+        placeholder="Press any key..."
+        size="15"
+      /><br />
 
-        <h1>Form Events</h1><br>
+      <h1>Form Events</h1>
+      <br />
 
-        <pre>
+      <pre>
             <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
                 // ------------------------------------------------------------------------------------ //
                 // BLUR Example
@@ -580,34 +722,45 @@
             </code>
         </pre>
 
-        <h2>Blur Example</h2>
-        <input type="text" id="blur" placeholder="Input any text, followed by the TAB key." size="40"><br>
+      <h2>Blur Example</h2>
+      <input
+        type="text"
+        id="blur"
+        placeholder="Input any text, followed by the TAB key."
+        size="40"
+      /><br />
 
-        <h2>Submit Example</h2>
-        <p>Type in <span class="code">Hyperion</span> to submit this form successfully.</p>
-        <form>
-            <d>
-                <input type="text" id="toSubmit">
-                <input type="submit" id="submitBtn">
-            </d>
-        </form>
-        <span id="formFeedback"></span>
+      <h2>Submit Example</h2>
+      <p>
+        Type in <span class="code">Hyperion</span> to submit this form
+        successfully.
+      </p>
+      <form>
+        <d>
+          <input type="text" id="toSubmit" />
+          <input type="submit" id="submitBtn" />
+        </d>
+      </form>
+      <span id="formFeedback"></span>
 
-        <p>Please see the last example on <a href="./js_events.html">this page</a> to see an example of a <span class="code">change</span> event.</p>
-
+      <p>
+        Please see the last example on
+        <a href="./js_events.html">this page</a> to see an example of a
+        <span class="code">change</span> event.
+      </p>
     </div>
 
     <!-- Button to go back to the top of the page -->
     <div id="back-to-top">
-        <a href="#page-top" class="fa-sharp fa-solid fa-circle-up"></a>
+      <a href="#page-top" class="fa-sharp fa-solid fa-circle-up"></a>
     </div>
 
     <div class="footer">
-        <hr>
-        <p>Level 4, Task 15.</p>
+      <hr />
+      <p>JavaScript Tutorial</p>
     </div>
-    <script src="./javaScript/jquery-3.7.0.min.js"></script>
+    <script src="./javaScript/jquery-4.0.0.min.js"></script>
     <script src="./javascript/jquery.js"></script>
     <script src="./javaScript/prism.js"></script>
-</body>
+  </body>
 </html>
