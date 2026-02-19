@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions</title>
+    <link rel="stylesheet" href="./css/prism.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <script src="https://kit.fontawesome.com/3b389031fb.js" crossorigin="anonymous"></script>
+    <div class="header" id="page-top">
+        <ul class="nav">
+            <li><a href="./index.html">Basic JavaScript</a></li>
+            <li><a href="./javascript_functions.html" class="selected">JavaScript Functions</a></li>
+            <li><a href="./js_events.html">JavaScript Events</a></li>
+            <li><a href="./jquery.html">jQuery</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1><span class="code">charAt()</span></h1>
+        <p>The <span class="code">charAt()</span> method returns the character at a specified index in a string.</p>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                let text = 'Hello World';
+
+                char_1 = text.charAt(1);
+                char_2 = text.charAt(3);
+                char_3 = text.charAt(text.length - 1);
+
+                // What is char_&lt;x&gt;?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">char_&lt;x&gt;</span></button>
+        <div class="toShow">
+            <code>char_1 = 'e'</code><br>
+            <code>char_2 = 'l'</code><br>
+            <code>char_3 = 'd'</code>
+        </div><br>
+
+        <h1><span class="code">indexOf()</span></h1>
+        <p><span class="code">indexOf()</span> returns the position of the first occurrence of a value in a string.</p>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                let text = 'Hello world, welcome to the universe.';
+                let result = text.indexOf('welcome');
+
+                console.log(result);  // What is `result`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">result</span></button>
+        <div class="toShow">
+            <code>13</code>
+        </div><br>
+
+        <h1><span class="code">charCodeAt()</span></h1>
+        <p>The <span class="code">charCodeAt()</span> method returns the Unicode of the character at a specified index in a string.</p>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                let text = 'HELLO WORLD';
+                let code = text.charCodeAt(0);
+
+                console.log(code);  // What is `code`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">code</span></button>
+        <div class="toShow">
+            <code>72</code>
+        </div><br>
+
+        <h1><span class="code">fromCharCode()</span></h1>
+        <p>The <span class="code">String.fromCharCode()</span> method converts Unicode values to characters.</p>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                let text = String.fromCharCode(72, 69, 76, 76, 79);
+
+                console.log(text);  // What is `text`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">text</span></button>
+        <div class="toShow">
+            <code>'HELLO'</code>
+        </div><br>
+
+        <h1><span class="code">replace()</span></h1>
+        <p>The <span class="code">replace()</span> method searches a string for a value (or a regular expression).</p>
+        <p>The <span class="code">replace()</span> method returns a new string with the value(s) replaced.</p>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                let text = 'Visit Microsoft!';
+                let result = text.replace('Microsoft', 'Linux');
+
+                console.log(result);  // What is `result`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">result</span></button>
+        <div class="toShow">
+            <code>'Visit Linux!'</code>
+        </div><br>
+
+        <h1><span class="code">split()</span></h1>
+        <p>The <span class="code">split()</span> method splits a string into an array of substrings.</p>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                let text = 'what are we going to eat?';
+                // (' ') is used as a separator; the string is split between the words.
+                let textArr = text.split(' ');
+
+                console.log(textArr);  // What is `textArr`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">textArr</span></button>
+        <div class="toShow">
+            <code>textArr = ['what', 'are', 'we', 'going', 'to', 'eat?']</code>
+        </div><br>
+
+        <h1><span class="code">toUpperCase()</span></h1>
+        <p>The <span class="code">toUpperCase()</span> method converts the string characters to uppercase letters.</p>
+        <p><span class="code">toUpperCase()</span> does not change the original string.</p>
+
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                let text = 'The pyramids of Giza';
+                let result = text.toUpperCase();
+
+                console.log(result);  // What is `result`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">result</span></button>
+        <div class="toShow">
+            <code>result = 'THE PYRAMIDS OF GIZA'</code>
+        </div><br>
+
+        <h1><span class="code">toLowerCase()</span></h1>
+        <p>The <span class="code">toLowerCase()</span> method converts a string to lowercase letters.</p>
+        <p><span class="code">toLowerCase()</span> does not change the original string.</p>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                let text = 'Atlantis, UNDER THE SEA';
+                let result = text.toLowerCase();
+
+                console.log(result);
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">result</span></button>
+        <div class="toShow">
+            <code>result = 'atlantis, under the sea'</code>
+        </div><br>
+
+        <h1><span class="code">join()</span></h1>
+        <p>The <span class="code">join()</span> method returns an array as a string.</p>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                let shows = ['Berserk', 'Naruto', 'Bleach', 'PsychoPass'];
+                let text = shows.join(' and ');
+
+                console.log(text);  // What is `text`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">text</span></button>
+        <div class="toShow">
+            <code>result = 'Berserk and Naruto and Bleach and PsychoPass'</code>
+        </div><br>
+
+        <h1><span class="code">pow()</span></h1>
+        <p>The <span class="code">Math.pow(x, y)</span> returns a value of <span class="code">x</span> raised to the power of <span class="code">y</span>.</p>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                let answer = Math.pow(2, 4);
+
+                console.log(answer);  // What is `answer`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">answer</span></button>
+        <div class="toShow">
+            <code>answer = 16</code>
+        </div><br>
+
+        <h1><span class="code">min()</span></h1>
+        <p>The <span class="code">Math.min()</span> method returns the number with the smallest value.</p>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                let answer = Math.min(0, 150, 30, -2, 38);
+
+                console.log(answer);  // What is `answer`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">answer</span></button>
+        <div class="toShow">
+            <code>answer = -2</code>
+        </div><br>
+
+        <h1><span class="code">max()</span></h1>
+        <p>The <span class="code">Math.max()</span> method returns the number with the biggest value.</p>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                let answer = Math.max(0, 150, 30, -2000, 38);
+
+                console.log(answer);  // What is `answer`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">answer</span></button>
+        <div class="toShow">
+            <code>answer = 150</code>
+        </div><br>
+
+        <h1><span class="code">round()</span></h1>
+        <p>The <span class="code">round()</span> method returns  number to the nearest integer.</p>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                let result_1 = Math.round(2.5);
+                let result_2 = Math.round(15.2);
+
+                console.log(result_1);
+                console.log(result_2);  // What is `result_&lt;x&gt;`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">result_&lt;x&gt;</span></button>
+        <div class="toShow">
+            <code>result_1 = 3</code><br>
+            <code>result_2 = 15</code>
+        </div><br>
+
+        <h1>User-Defined Function</h1>
+        <p>Functions allow you to create routines that you can use over an over again. You save time in re-using common components, and by designing your own functions, you can extend JavaScript's base language to suit your needs.</p>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                function kelvinToCelsius(kelvin) {
+                    let x = kelvin - 273.15;
+                    return x;
+                }
+
+                let degrees = kelvinToCelsius(84);
+
+                console.log(degrees);  // What is `degrees`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">degrees</span></button>
+        <div class="toShow">
+            <code>degrees = -189.15</code>
+        </div>
+    </div>
+
+    <!-- Button to go back to the top of the page -->
+    <div id="back-to-top">
+        <a href="#page-top" class="fa-sharp fa-solid fa-circle-up"></a>
+    </div>
+
+    <div class="footer">
+        <hr>
+        <p>Level 4, Task 15.</p>
+    </div>
+
+    <script src="./javaScript/jquery-3.7.0.min.js"></script>
+    <script src="./javaScript/functionality.js"></script>
+    <script src="./javaScript/prism.js"></script>
+</body>
+
+</html>

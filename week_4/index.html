@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic JavaScript Syntax</title>
+    <link rel="stylesheet" href="./css/prism.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <script src="https://kit.fontawesome.com/3b389031fb.js" crossorigin="anonymous"></script>
+    <div class="header" id="page-top">
+        <ul class="nav">
+            <li><a href="./index.html" class="selected">Basic JavaScript</a></li>
+            <li><a href="./javascript_functions.html">JavaScript Functions</a></li>
+            <li><a href="./js_events.html">JavaScript Events</a></li>
+            <li><a href="./jquery.html">jQuery</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>The assignment operator</h1>
+        <pre>
+                <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                    // Assigning the string "Hello" to the variable `greeting`.
+                    let greeting = "Hello";
+
+                    // A constant is a variable that cannot be re-assigned.
+                    const pi = 3.1416;
+                </code>
+            </pre>
+        <h1>Conditional Statements</h1>
+        <p>A conditional statement is based on a concept of if/then/else; <em>if</em> a condition is met, <em>then</em>
+            your code executes one or more statements, <em>else</em> your code does something different, <em>or</em>
+            just skips the step.</p>
+            <pre>
+                <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                    // If your score is greater than 50, then you pass, otherwise you fail.
+                    if (score > 50) {
+                        console.log('You Passed!');
+                    } else {
+                        console.log('Try again...');
+                    }
+                </code>
+            </pre>
+        <h1>Switch Statement</h1>
+        <p>A switch statement starts with a variable called the switch value.</p>
+        <p>Each case indicates a possible value for this variable, and the code that should run if the variable matches
+            that value.</p>
+        <p>Consider the example below, which generates a message based on the level.</p>
+        <pre>
+                <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                    let message;    // Message
+                    let level = 2;  // Level
+
+                    // Determine the message based on the level:
+                    switch (level) {
+                        case 1:
+                            message = 'Good luck on the first test';
+                            break;
+                        
+                        case 2:
+                            message = 'Second of Three - Keep Going';
+                            break;
+                        
+                        case 3:
+                            message = 'Final round, almost there';
+                            break;
+                        
+                        default:
+                            message = 'Good Luck!';
+                            break;
+                    }
+                </code>
+            </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">message</span></button>
+        <div class="toShow">
+            <code>Second of Three - Keep Going</code>
+        </div><br>
+        <h1>Using Comparison Operators</h1>
+        <pre>
+                <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                    let pass = 50;   // The pass mark.
+                    let score = 90;  // The score of the user.
+
+                    // Check whether the user has passed:
+                    let hasPassed = score >= pass;
+                </code>
+            </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">hasPassed</span></button>
+        <div class="toShow">
+            <code>true</code>
+        </div><br>
+        <h1>Logical Operators</h1>
+        <p>Comparison Operators usually return single values of <span class="code">true</span> or <span
+                class="code">false</span>.<br><strong>Logical Operators</strong> allow you to compare the results of
+            more than one comparison operator.
+        </p>
+        <pre>
+                <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                    /*
+                        Logical AND.
+                        If both expressions evaluate to true, then the expression returns true.
+                        If just one of these expressions evaluate to true, then the expression returns false.
+                    */
+                    value_1 = ((2 &lt; 5) && (3 &gt;= 2));
+
+                    /*
+                        Logical OR.
+                        If either expression evaluates to true, then the expression returns true.
+                        If both return false, then the expression will return false.
+                    */
+                    value_2 = ((2 &lt; 5) || (2 &lt; 1));
+
+                    /*
+                        Logical NOT.
+                        This reverses the state of an expression.
+                        If it was false (without the ! before it) it would return true.
+                        If it was true (without the ! before it) it would return false.
+                    */
+                    value_3 = !(2 &lt; 1);
+                </code>
+            </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">value_&lt;x&gt;</span></button>
+        <div class="toShow">
+            <code>value_1 = true</code><br>
+            <code>value_2 = true</code><br>
+            <code>value_3 = true</code>
+        </div>
+        <p>Another Example</p>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+            let score1 = 65;  // Round one score
+            let score2 = 64;  // Round two score
+            let pass1 = 60;   // Round one pass mark
+            let pass2 = 60;   // Round two pass mark
+
+            // Check whether the user passed both rounds, and store the result in passBoth variable.
+            let passBoth = (score1 >= pass1) && (score2 >= pass2);  // What is passBoth?
+
+            // Check whether the user passed one of the two rounds, and store the result in minPass variable.
+            let minPass = ((score1 &gt;= pass1) || (score2 &gt; pass2));  // What is minPass?
+
+            // Determine if a resit is required:
+            let resit = !(minPass);  // What is resit?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal Values</button>
+        <div class="toShow">
+            <code>passBoth = true</code><br>
+            <code>minPass = true</code><br>
+            <code>resit = false</code>
+        </div><br>
+        <h1>Loops</h1>
+        <p>Loops check a condition. If it returns <span class="code">true</span>, a code block will run.
+            Then the condition will be checked again, and if it still returns <span class="code">true</span>, the code
+            block will run again.
+            It repeats until the condition returns <span class="code">false</span>.</p>
+        <p>There are three common types of loops:</p>
+        <ul>
+            <li><span class="code">for</span></li>
+            <li><span class="code">while</span></li>
+            <li><span class="code">do ... while</span></li>
+        </ul>
+        <div class="three-cols">
+            <div class="col"><strong>FOR</strong><br>If you need to run code a specific number of times, use a <span
+                    class="code">for</span> loop. In a <span class="code">for</span> loop, the condition is usually a
+                counter which is used to tell how many times the loop should run.</div>
+            <div class="col"><strong>WHILE</strong><br>If you do not know how many times the code should run, you can
+                use a <span class="col">while</span> loop. Here the condition can be something other than a counter, and
+                the code will continue to loop for as long as the condition is <span class="col">true</span>.</div>
+            <div class="col"><strong>DO...WHILE</strong><br>The <span class="code">do...while</span> loop is very
+                similar to the <span class="code">while</span> loop, but has one key difference: it will always run the
+                statements inside the curly braces at least once, even if the condition evaluates to <span
+                    class="code">false</span>.</div>
+        </div>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                // FOR-loop example.
+
+                // In this example, the scores for each round of a test are stored in an array called scores:
+                let scores = [24, 32, 17];
+                let roundNumber = 0;
+                let msg = '';
+                let i;
+
+                // Loop through the items in the array:
+                for (i = 0; i &lt; scores.length; i++) {
+                    // Arrays are zero-based, therefore we add one to get the round number:
+                    roundNumber = i + i;
+
+                    // Write the current round to the message:
+                    msg += 'Round ' + roundNumber + ': ';
+
+                    // Get the score from the scores array:
+                    msg += scores[i] + '&lt;br&gt;';
+                }
+                console.log(msg);  // What is `msg`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">msg</span></button>
+        <div class="toShow">
+            <code>Round 1: 24</code><br>
+            <code>Round 2: 32</code><br>
+            <code>Round 3: 17</code>
+        </div>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                // WHILE-loop example
+
+                // Set a counter to 1, and initialise a blank string variable.
+                let i = 1;
+                let msg = '';
+
+                // Store the 5-times table in a variable:
+                while (i &lt;= 10) {
+                    let multiple = i * 5;
+                    msg += `${i} x 5 = ${multiple}&lt;br&gt;`;
+                    i++;
+                }
+
+                console.log(msg);  // What is `msg`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">msg</span></button>
+        <div class="toShow">
+            <code>1 x 5 = 5</code><br>
+            <code>2 x 5 = 10</code><br>
+            <code>3 x 5 = 15</code><br>
+            <code>4 x 5 = 20</code><br>
+            <code>5 x 5 = 25</code><br>
+            <code>6 x 5 = 30</code><br>
+            <code>7 x 5 = 35</code><br>
+            <code>8 x 5 = 40</code><br>
+            <code>9 x 5 = 45</code><br>
+            <code>10 x 5 = 50</code>
+        </div>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                // DO...WHILE-loop example
+
+                // Set a counter to 1, and initialise a blank string variable.
+                let i = 1;
+                let msg = '';
+
+                do {
+                    let multiple = i * 5;
+                    msg += `${i} x 5 = ${multiple}`;
+                } while (i &lt; 1);
+                // Notice how i is already 1 and the code block still runs.
+
+                console.log(msg);  // What is `msg`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">msg</span></button>
+        <div class="toShow">
+            <code>1 x 5 = 5</code>
+        </div><br>
+        <h1>Array Methods</h1>
+        <h2>Adding Items</h2>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                // --------------------------------------------------------------------------------------------------------- //
+                // push()  Adds one or more items to end of the array, and returns the number of items in it.
+                let fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+                fruits.push('Kiwi', 'Lemon');  // What is `fruits`?
+
+                // --------------------------------------------------------------------------------------------------------- //
+                // unshift()  Adds one or more items to the start of the array, and returns the new length of it.
+                let fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+                fruits.unshift('Lemon', 'Pineapple');  // What is `fruits`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">fruits</span></button>
+        <div class="toShow">
+            <code>fruits = ['Banana', 'Orange', 'Apple', 'Mango', 'Kiwi', 'Lemon']</code><br>
+            <code>fruits = ['Lemon', 'Pineapple', 'Banana', 'Orange', 'Apple', 'Mango']</code>
+        </div>
+
+        <h2>Removing Items</h2>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                // --------------------------------------------------------------------------------------------------------- //
+                // pop()  Removes the Last element from array (and returns the element)
+                let fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+                let element = fruits.pop();
+                console.log(element);  // What is `element`?
+
+                // --------------------------------------------------------------------------------------------------------- //
+                // shift()  Removes the first element from an array (and returns the element).
+                let fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+                let element = fruits.shift();
+                console.log(element);  // What is `element`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">element</span></button>
+        <div class="toShow">
+            <code>element = 'Mango'</code><br>
+            <code>element = 'Banana'</code>
+        </div>
+
+        <h2>Splice</h2>
+        <p>The <span class="code">splice()</span> method adds and/or removes array elements.</p>
+        <p>The <span class="code">splice()</span> method overwrites the original array.</p>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                // --------------------------------------------------------------------------------------------------------- //
+                let fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+                // At position 2, add 2 elements:
+                fruits.splice(2, 0, 'Lemon', 'Kiwi');  // What is `fruits`?
+
+                // --------------------------------------------------------------------------------------------------------- //
+                let fruits = ['Banana', 'Orange', 'Apple', 'Mango', 'Kiwi'];
+                // At position 2, remove 2 items:
+                fruits.splice(2, 2);  // What is `fruits`?
+
+                // --------------------------------------------------------------------------------------------------------- //
+                let fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+                // At position 2, add 2 elements, and remove 1 element:
+                fruits.splice(2, 1, 'Lemon', 'Kiwi');  // What is `fruits`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">fruits</span></button>
+        <div class="toShow">
+            <code>fruits = ['Banana', 'Orange', 'Lemon', 'Kiwi', 'Apple', 'Mango']</code><br>
+            <code>fruits = ['Banana', 'Orange', 'Kiwi']</code><br>
+            <code>fruits = ['Banana', 'Orange', 'Lemon', 'Kiwi', 'Mango']</code>
+        </div>
+
+        <h2>Iterating over Items</h2>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                // --------------------------------------------------------------------------------------------------------- //
+                // forEach()  Executes a function once for each element in the array.
+                function myFunction(item, index) {
+                    text += index + ': ' + item + '&lt;br&gt;';
+                }
+
+                let fruits = ['apple', 'orange', 'cherry'];
+                fruits.forEach(myFunction);
+
+                console.log(text);  // What is `text`?
+
+                // --------------------------------------------------------------------------------------------------------- //
+                // some()  Checks if some elements in the array pass a text specified by a function.
+                function checkAdult(age) {
+                    return age > 18;
+                }
+
+                let ages = [3, 10, 18, 20];
+                let answer = ages.some(checkAdult);
+                console.log(answer);  // What is `answer`?
+
+                // --------------------------------------------------------------------------------------------------------- //
+                // every()  Checks if all the elements in an array pass a test specified by a function.
+                function checkAge(age) {
+                    return age > 18;
+                }
+
+                let ages = [32, 33, 16, 40];
+                let answer = ages.every(checkAge);
+                console.log(answer);  // What is `answer`?
+
+                // --------------------------------------------------------------------------------------------------------- //
+                // includes()  Returns true if an array contains a specified element.
+
+                let sports = ['cricket', 'tennis', 'golf', 'soccer'];
+                let outcome = sports.includes('tennis');  // What is `outcome`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal answers</button>
+        <div class="toShow">
+            <code>0: apple</code><br>
+            <code>1: orange</code><br>
+            <code>2: cherry</code><br><br>
+            <code>answer = true</code><br><br>
+            <code>answer = false</code><br><br>
+            <code>outcome = true</code>
+        </div>
+
+        <h2>Combining Arrays</h2>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                // concat()  Creates a new array containing this array and other array values.
+
+                let arr_1 = ['Cecilie', 'Lone'];
+                let arr_2 = ['Emil', 'Tobias', 'Linus'];
+
+                let children = arr_1.concat(arr_2);
+                // What is `children`?  ['Cecilie', 'Lone', 'Emil', 'Tobias', 'Linus']
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">children</span></button>
+        <div class="toShow">
+            <code>children = ['Cecilie', 'Lone', 'Emil', 'Tobias', 'Linus']</code>
+        </div>
+
+        <h2>Filtering Arrays</h2>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                // filter()  Creates a new array with elements that pass a test specified by a function.
+                function checkAdult(age) {
+                    return age >= 18;
+                }
+
+                let ages = [32, 33, 16, 40];
+                let result = ages.filter(checkAdult);
+                // What is `result`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">result</span></button>
+        <div class="toShow">
+            <code>result = [32, 33, 40]</code>
+        </div>
+
+        <h2>Reordering Arrays</h2>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                // --------------------------------------------------------------------------------------------------------- //
+                // sort()  Reorders items in array using a function (called a compare function).
+                let points = [40, 100, 1, 5, 25, 10];
+
+                // Sort the numbers in ascending order.
+                points.sort(function(a, b){return a-b});
+                // What is `points`?
+
+                // --------------------------------------------------------------------------------------------------------- //
+                // reverse()  Reverses the order of items in an array:
+                let fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+
+                let revFruits = fruits.reversed();
+                // What is `revFruits`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">points</span> and <span
+                class="code">revFruits</span></button>
+        <div class="toShow">
+            <code>points = [1, 5, 10, 25, 40, 100]</code><br>
+            <code>revFruits = ['Mango', 'Apple', 'Orange', 'Banana']</code>
+        </div>
+
+        <h2>Modifying Array Elements</h2>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                let numbers = [65, 44, 12, 4];
+
+                function multTen(num) {
+                    return num * 10;
+                }
+
+                // Multiply all the values in the array with 10.
+                let newNumbers = numbers.map(multTen);
+                // What is `newNumbers`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">newNumbers</span></button>
+        <div class="toShow">
+            <code>newNumbers = [650, 440, 120, 40]</code>
+        </div>
+
+        <h2>Extracting the Index of a Specific Element</h2>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                let fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+                let index = fruits.indexOf('Apple');  // What is `index`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal <span class="code">index</span></button>
+        <div class="toShow">
+            <code>index = 2</code>
+        </div><br>
+
+        <h1>Maps</h1>
+        <p>A map holds key/value pairs, where the keys can be of any datatype.</p>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                // Map Creation
+                let fruits = new Map([
+                    ['apples', 500],
+                    ['bananas', 300],
+                    ['oranges', 200]
+                ]);
+
+                // Map Creation
+                let classes = new Map([
+                    ['grade_1', 40],
+                    ['grade_2', 35],
+                    ['grade_3', 41]
+                ]);
+
+                // --------------------------------------------------------------------------------------------------------- //
+                // has()  Returns true if a key exists in a Map.
+                let value_1 = fruits.has('apples');  // What is `value_1`?
+
+                // --------------------------------------------------------------------------------------------------------- //
+                // get()  Gets the value for a key in a Map.
+                let value_2 = fruits.get('apples');  // What is `value_2`?
+
+                // --------------------------------------------------------------------------------------------------------- //
+                // delete()  Removes a Map key/value pair specified by a key.
+                fruits.delete('apples');  // What is `fruits`?
+
+                // --------------------------------------------------------------------------------------------------------- //
+                // clear()  Removes all the elements from a Map.
+                classes.clear();  // What is `classes.size`?
+            </code>
+        </pre>
+        <button type="button" class="collapsible">Reveal answers</button>
+        <div class="toShow">
+            <code>value_1 = true</code><br>
+            <code>value_2 = 500</code><br>
+            <code>classes.size = 0</code>
+        </div>
+        <h2>Iterating Over Maps</h2>
+        <pre>
+            <code class="language-js line-numbers" data-prismjs-copy="Copy the JavaScript snippet">
+                // Map Creation
+                let classes = new Map([
+                    ['Grade 1', 40],
+                    ['Grade 2', 35],
+                    ['Grade 3', 42]
+                ]);
+
+                // --------------------------------------------------------------------------------------------------------- //
+                // Iterating over key/value pairs.
+                for (let [k, v] of classes) {
+                    console.log(`${k} has ${v} students.`);
+                }
+                /* Output:
+                Grade 1 has 40 students.
+                Grade 2 has 35 students.
+                Grade 3 has 42 students.
+                */
+
+                // --------------------------------------------------------------------------------------------------------- //
+                // Iterating over key/value pairs.
+                for (let [k, v] of classes.entries()) {
+                    console.log(`${k} has ${v} students.`);
+                }
+                /* Output:
+                Grade 1 has 40 students.
+                Grade 2 has 35 students.
+                Grade 3 has 42 students.
+                */
+
+                // --------------------------------------------------------------------------------------------------------- //
+                // Iterating over keys.
+                for (let k of classes.keys()) {
+                    console.log(k);
+                }
+                /* Output:
+                Grade 1
+                Grade 2
+                Grade 3
+                */
+
+                // -------------------------------------------------------------------------------------------------------- //
+                // Iterating over values.
+                for (let v of classes.values()) {
+                    console.log(`${v} students.`);
+                }
+                /* Output
+                40 students.
+                35 students.
+                42 students.
+                */
+            </code>
+        </pre>
+    </div>
+
+    <!-- Button to go back to the top of the page -->
+    <div id="back-to-top">
+        <a href="#page-top" class="fa-sharp fa-solid fa-circle-up"></a>
+    </div>
+
+    <div class="footer">
+        <hr>
+        <p>Level 4, Task 15.</p>
+    </div>
+
+    <script src="./javaScript/jquery-3.7.0.min.js"></script>
+    <script src="./javaScript/functionality.js"></script>
+    <script src="./javaScript/prism.js"></script>
+</body>
+
+</html>
